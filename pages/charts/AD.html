@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Report</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+	<style>
+	.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+</style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="../../index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LS</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Analysis</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Non-Aggregated Data
+        <small>2013-2017</small>
+	</h1>
+       <h1 style="text-align:right">
+        Aggregated Data<small>2018-2022</small></h1> 
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- AREA CHART -->
+		  <h3 style="text-align:center">Baseline analysis</h3>
+         <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Visitors during the year(in lakhs)</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="visitors" style="height:250px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+		  		  
+		  <h3 style="text-align:center">Economic Impact of analysis</h3>
+		  <!-- LINE CHART-->
+		  <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Garbage (in kgs) found in the park</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="garbage" style="height:250px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+		  
+		  <h3 style="text-align:center">Social Impact of analysis</h3>
+		   <!-- BAR CHART -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Battery cars and cycles installed for easy commutation</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="devices" style="height:230px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+		  
+		  <h3 style="text-align:center">Environment Impact of analysis</h3>
+		  <!-- DONUT CHART -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">Species count</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <canvas id="species" style="height:250px"></canvas>
+            </div>
+            <!-- /.box-body -->
+          </div>
+	</div>
+	
+	 <div class="col-md-6">
+		  <h3 style="text-align:center">Baseline analysis</h3>
+         <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Visitors during the year(in lakhs)</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="a_visitors" style="height:250px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+		  
+		  <!-- bar chart -->
+		  <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Tourists from various Union Territories of India (in lakhs)</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="union" style="height:230px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+		  
+		   <!-- BAR CHART -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Tourists from various states of India (in lakhs)</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="states" style="height:230px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+		  
+		  <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">Tourists from foreign countries (in lakhs)</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <canvas id="foreign" style="height:250px"></canvas>
+            </div>
+            <!-- /.box-body -->
+          </div>
+		  
+		  <h3 style="text-align:center">Economic Impact of analysis</h3>
+		  <!-- LINE CHART-->
+		  <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Garbage (in kgs) found in the park</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="a_garbage" style="height:250px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+		  <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Popularity of the park (in percentage)</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="popularity" style="height:250px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+		  
+		  <h3 style="text-align:center">Social Impact of analysis</h3>
+		  <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Employment in the park</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="employ" style="height:250px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+		  
+		  <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Battery cars and cycles installed for easy commutation</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="a_devices" style="height:230px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+		   <h3 style="text-align:center">Environment Impact of analysis</h3>
+		  <!-- DONUT CHART -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">Species count</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <canvas id="a_species" style="height:250px"></canvas>
+            </div>
+            <!-- /.box-body -->
+          </div>
+		  
+		  <h3 style="text-align:center">Market demand analysis & Intelligence</h3>
+		  <!-- DONUT CHART -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Revenue for the government</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="revenue" style="height:230px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+	 
+	 </div>
+	<a class="button" style="vertical-align:central" href="suggest.html"><span>Predictive Suggestions </span></a>
+    </section>
+    <!-- /.content -->
+  </div>
+
+  <!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- ChartJS -->
+<script src="../../bower_components/chart.js/Chart.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- page script -->
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBKws_Fq45K3BOmfD-Qkld5FXYrsptIvSs",
+    authDomain: "envapp-analyse.firebaseapp.com",
+    databaseURL: "https://envapp-analyse.firebaseio.com",
+    projectId: "envapp-analyse",
+    storageBucket: "envapp-analyse.appspot.com",
+    messagingSenderId: "282525814522"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script>
+  $(function () {
+
+ var areaChartOptions = {
+      showScale               : true,
+      scaleShowGridLines      : true,
+	  scaleBeginAtZero        : true,
+      scaleGridLineColor      : 'rgba(0,0,0,.05)',
+      scaleGridLineWidth      : 1,
+      scaleShowHorizontalLines: true,
+      scaleShowVerticalLines  : true,
+      bezierCurve             : false,
+      bezierCurveTension      : 0.3,
+      pointDot                : true,
+      pointDotRadius          : 4,
+      pointDotStrokeWidth     : 1,
+      pointHitDetectionRadius : 20,
+      datasetStroke           : false,
+      datasetStrokeWidth      : 2,
+      datasetFill             : false,
+      legendTemplate          : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].lineColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+      maintainAspectRatio     : true,
+      responsive              : true
+    }  
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.NonAggregated.VisitorsCount; 
+	console.log(fullData.NonAggregated.VisitorsCount);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+    var areaChartCanvas = $('#visitors').get(0).getContext('2d')
+    var areaChart       = new Chart(areaChartCanvas)
+
+    var areaChartData = {
+      labels  : ['2013','2014','2015','2016','2017'],
+      datasets: [
+        {
+          label               : 'Digital Goods',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#DF0139',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#82C714',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+
+    areaChart.Line(areaChartData, areaChartOptions)
+});
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.Aggregated.VisitorsCount; 
+	console.log(fullData.Aggregated.VisitorsCount);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+    var areaChartCanvas = $('#a_visitors').get(0).getContext('2d')
+    var areaChart       = new Chart(areaChartCanvas)
+
+    var areaChartData = {
+      labels  : ['2018','2019','2020','2021','2022'],
+      datasets: [
+        {
+          label               : 'Digital Goods',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#DD0205',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#0D3C03',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+
+    areaChart.Line(areaChartData, areaChartOptions)
+});
+
+var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.NonAggregated.GarbageCollected; 
+	console.log(fullData.NonAggregated.GarbageCollected);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+    var areaChartCanvas = $('#garbage').get(0).getContext('2d')
+    var areaChart       = new Chart(areaChartCanvas)
+
+    var areaChartData = {
+      labels  : ['2013','2014','2015','2016','2017'],
+      datasets: [
+        {
+          label               : 'Digital Goods',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#ef330e',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#020201',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+
+    areaChart.Line(areaChartData, areaChartOptions)
+});
+
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.Aggregated.GarbageCollected; 
+	console.log(fullData.Aggregated.GarbageCollected);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+    var areaChartCanvas = $('#a_garbage').get(0).getContext('2d')
+    var areaChart       = new Chart(areaChartCanvas)
+
+    var areaChartData = {
+      labels  : ['2013','2014','2015','2016','2017'],
+      datasets: [
+        {
+          label               : 'Digital Goods',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#96f902',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#0c1e70',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+
+    areaChart.Line(areaChartData, areaChartOptions)
+});
+
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.Aggregated.Popularity; 
+	console.log(fullData.Aggregated.Popularity);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+    var areaChartCanvas = $('#popularity').get(0).getContext('2d')
+    var areaChart       = new Chart(areaChartCanvas)
+
+    var areaChartData = {
+      labels  : ['2018','2019','2020','2021','2022'],
+      datasets: [
+        {
+          label               : 'Digital Goods',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#c180ed',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#200235',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+	areaChart.Line(areaChartData, areaChartOptions)
+});
+
+    //-------------
+    //- BAR CHART -
+    //-------------
+	var barChartOptions                  = {
+      scaleBeginAtZero        : true,
+      scaleShowGridLines      : true,
+	  barValueSpacing : 5,
+      scaleGridLineColor      : 'rgba(0,0,0,.05)',
+      scaleGridLineWidth      : 3,
+      scaleShowHorizontalLines: true,
+      scaleShowVerticalLines  : true,
+      barShowStroke           : true,
+      barStrokeWidth          : 2,
+      barDatasetSpacing       : 1,
+      legendTemplate          : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+      responsive              : true,
+      maintainAspectRatio     : true
+    }
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.Aggregated.TouristFromUT; 
+	console.log(fullData.Aggregated.TouristFromUT);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+	var barChartCanvas                   = $('#union').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData = {
+      labels  : ['2018','2019','2020','2021','2022'],
+      datasets: [
+        {
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#25acf9',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#04669e',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+    barChartData.datasets[0].fillColor   = '#ef0946'
+    barChartData.datasets[0].strokeColor = '#f7b7c8'
+    barChartData.datasets[0].pointColor  = '#7c1d37'
+    
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+ });
+ 
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.Aggregated.TouristFromForeign; 
+	console.log(fullData.Aggregated.TouristFromForeign);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+	var barChartCanvas                   = $('#foreign').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData = {
+      labels  : ['2018','2019','2020','2021','2022'],
+      datasets: [
+        {
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#177007',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+    barChartData.datasets[0].fillColor   = '#f4587a'
+    barChartData.datasets[0].strokeColor = '#f4587a'
+    barChartData.datasets[0].pointColor  = '#ffa33a'
+    
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+ });
+ 
+ 	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.Aggregated.TouristsFromStates; 
+	console.log(fullData.Aggregated.TouristsFromStates);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+	var barChartCanvas                   = $('#states').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData = {
+      labels  : ['2018','2019','2020','2021','2022'],
+      datasets: [
+        {
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#30dbf2',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+    barChartData.datasets[0].fillColor   = '#a7f12f'
+    barChartData.datasets[0].strokeColor = '##a7f12f'
+    barChartData.datasets[0].pointColor  = '#ffa33a'
+    
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+ });
+ 
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.Aggregated.Revenue; 
+	console.log(fullData.Aggregated.Revenue);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+	var barChartCanvas                   = $('#revenue').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData = {
+      labels  : ['2018','2019','2020','2021','2022'],
+      datasets: [
+        {
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#4f0f49',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+    barChartData.datasets[0].fillColor   = '#cdafed'
+    barChartData.datasets[0].strokeColor = '#cdafed'
+    barChartData.datasets[0].pointColor  = '#cdafed'
+    
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+ }); 
+ 
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.NonAggregated.SpeciesCount.y2013; 
+	console.log(fullData.NonAggregated.SpeciesCount.y2013);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+	var data1 = fullData.NonAggregated.SpeciesCount.y2014; 
+	console.log(fullData.NonAggregated.SpeciesCount.y2014);
+	var value1=[];
+	var i=0;
+	for (var k1 in data1){
+	console.log(data1[k1]);
+	value1[i]=data1[k1];i++;
+	}
+	var data2 = fullData.NonAggregated.SpeciesCount.y2015; 
+	console.log(fullData.NonAggregated.SpeciesCount.y2015);
+	var value2=[];
+	var i=0;
+	for (var k2 in data2){
+	console.log(data2[k2]);
+	value2[i]=data2[k2];i++;
+	}
+	var data3 = fullData.NonAggregated.SpeciesCount.y2016; 
+	console.log(fullData.NonAggregated.SpeciesCount.y2016);
+	var value3=[];
+	var i=0;
+	for (var k3 in data3){
+	console.log(data3[k3]);
+	value3[i]=data3[k3];i++;
+	}
+	var data4 = fullData.NonAggregated.SpeciesCount.y2017; 
+	console.log(fullData.NonAggregated.SpeciesCount.y2017);
+	var value4=[];
+	var i=0;
+	for (var k4 in data4){
+	console.log(data3[k4]);
+	value4[i]=data4[k4];i++;
+	}
+	var barChartCanvas                   = $('#species').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData = {
+      labels  : ['Amphibians','Birds','Fishes','Insects','Mammals','Reptiles'],
+      datasets: [
+        {
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#dd0808',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#8419c6',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value1
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#87e504',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value2
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#59c1c1',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value3
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#e592c8',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value4
+        }
+      ]
+    }
+    barChartData.datasets[0].fillColor   = '#209610'
+    barChartData.datasets[0].strokeColor = '#209610'
+    barChartData.datasets[0].pointColor  = '#209610'
+	barChartData.datasets[1].fillColor   = '#f7d21b'
+    barChartData.datasets[1].strokeColor = '#f7d21b'
+    barChartData.datasets[1].pointColor  = '#f7d21b'
+	barChartData.datasets[2].fillColor   = '#dd0000'
+    barChartData.datasets[2].strokeColor = '#dd0000'
+    barChartData.datasets[2].pointColor  = '#dd0000'
+	barChartData.datasets[3].fillColor   = '#0634a0'
+    barChartData.datasets[3].strokeColor = '#0634a0'
+    barChartData.datasets[3].pointColor  = '#0634a0'
+	barChartData.datasets[4].fillColor   = '#4b206d'
+    barChartData.datasets[4].strokeColor = '#4b206d'
+    barChartData.datasets[4].pointColor  = '#4b206d'
+    
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+ });
+ 
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.Aggregated.SpeciesCount.y2018; 
+	console.log(fullData.Aggregated.SpeciesCount.y2018);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+	var data1 = fullData.Aggregated.SpeciesCount.y2019; 
+	console.log(fullData.Aggregated.SpeciesCount.y2019);
+	var value1=[];
+	var i=0;
+	for (var k1 in data1){
+	console.log(data1[k1]);
+	value1[i]=data1[k1];i++;
+	}
+	var data2 = fullData.Aggregated.SpeciesCount.y2020; 
+	console.log(fullData.Aggregated.SpeciesCount.y2020);
+	var value2=[];
+	var i=0;
+	for (var k2 in data2){
+	console.log(data2[k2]);
+	value2[i]=data2[k2];i++;
+	}
+	var data3 = fullData.Aggregated.SpeciesCount.y2021; 
+	console.log(fullData.Aggregated.SpeciesCount.y2021);
+	var value3=[];
+	var i=0;
+	for (var k3 in data3){
+	console.log(data3[k3]);
+	value3[i]=data3[k3];i++;
+	}
+	var data4 = fullData.Aggregated.SpeciesCount.y2022; 
+	console.log(fullData.Aggregated.SpeciesCount.y2022);
+	var value4=[];
+	var i=0;
+	for (var k4 in data4){
+	console.log(data3[k4]);
+	value4[i]=data4[k4];i++;
+	}
+	var barChartCanvas                   = $('#a_species').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData = {
+      labels  : ['Amphibians','Birds','Fishes','Insects','Mammals','Reptiles'],
+      datasets: [
+        {
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value1
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value2
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value3
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value4
+        }
+      ]
+    }
+    barChartData.datasets[0].fillColor   = '#770932'
+    barChartData.datasets[0].strokeColor = '#770932'
+    barChartData.datasets[0].pointColor  = '#770932'
+	barChartData.datasets[1].fillColor   = '#c90c52'
+    barChartData.datasets[1].strokeColor = '#c90c52'
+    barChartData.datasets[1].pointColor  = '#c90c52'
+	barChartData.datasets[2].fillColor   = '#e22b6f'
+    barChartData.datasets[2].strokeColor = '#e22b6f'
+    barChartData.datasets[2].pointColor  = '#e22b6f'
+	barChartData.datasets[3].fillColor   = '#e5598d'
+    barChartData.datasets[3].strokeColor = '#e5598d'
+    barChartData.datasets[3].pointColor  = '#e5598d'
+	barChartData.datasets[4].fillColor   = '#eda3be'
+    barChartData.datasets[4].strokeColor = '#eda3be'
+    barChartData.datasets[4].pointColor  = '#eda3be'
+    
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+ });
+ 
+ 	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.Aggregated.Employment; 
+	console.log(fullData.Aggregated.Employment);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+	var barChartCanvas                   = $('#employ').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData = {
+      labels  : ['2018','2019','2020','2021','2022'],
+      datasets: [
+        {
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        }
+      ]
+    }
+    barChartData.datasets[0].fillColor   = '#07706e'
+    barChartData.datasets[0].strokeColor = '#07706e'
+    barChartData.datasets[0].pointColor  = '#07706e'
+    
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+ }); 
+ 
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.NonAggregated.DevicesInstalled.BatteryCars; 
+	console.log(fullData.NonAggregated.DevicesInstalled.BatteryCars);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+	var data1 = fullData.NonAggregated.DevicesInstalled.Cycles; 
+	console.log(fullData.NonAggregated.DevicesInstalled.Cycles);
+	var value1=[];
+	var i=0;
+	for (var k1 in data1){
+	console.log(data1[k1]);
+	value1[i]=data1[k1];i++;
+	}
+	var barChartCanvas                   = $('#a_devices').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData = {
+      labels  : ['2018','2019','2020','2021','2022'],
+      datasets: [
+        {
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#840202',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#840202',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value1
+        }
+      ]
+    }
+    barChartData.datasets[0].fillColor   = '#840202'
+    barChartData.datasets[0].strokeColor = '#840202'
+    barChartData.datasets[0].pointColor  = '#840202'
+    barChartData.datasets[0].fillColor   = '#ef0b0b'
+    barChartData.datasets[0].strokeColor = '#ef0b0b'
+    barChartData.datasets[0].pointColor  = '#ef0b0b'
+	
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+	});
+	
+	var ref = firebase.database().ref(); 
+	ref.on("value", function(snapshot){
+    console.log(snapshot.val());
+	var fullData=snapshot.val();
+	
+	var data = fullData.NonAggregated.DevicesInstalled.BatteryCars; 
+	console.log(fullData.NonAggregated.DevicesInstalled.BatteryCars);
+	var value=[];
+	var i=0;
+	for (var k in data){
+	console.log(data[k]);
+	value[i]=data[k];i++;
+	}
+	var data1 = fullData.NonAggregated.DevicesInstalled.Cycles; 
+	console.log(fullData.NonAggregated.DevicesInstalled.Cycles);
+	var value1=[];
+	var i=0;
+	for (var k1 in data1){
+	console.log(data1[k1]);
+	value1[i]=data1[k1];i++;
+	}
+	var barChartCanvas                   = $('#devices').get(0).getContext('2d')
+    var barChart                         = new Chart(barChartCanvas)
+    var barChartData = {
+      labels  : ['2018','2019','2020','2021','2022'],
+      datasets: [
+        {
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#966015',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value
+        },
+		{
+          label               : 'Tourist count',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#966015',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : value1
+        }
+      ]
+    }
+    barChartData.datasets[0].fillColor   = '#79b707'
+    barChartData.datasets[0].strokeColor = '#79b707'
+    barChartData.datasets[0].pointColor  = '#79b707'
+    barChartData.datasets[0].fillColor   = '#157696'
+    barChartData.datasets[0].strokeColor = '#157696'
+    barChartData.datasets[0].pointColor  = '#157696'
+	
+    barChartOptions.datasetFill = false
+    barChart.Bar(barChartData, barChartOptions)
+	});
+ })
+</script>
+</body>
+</html>

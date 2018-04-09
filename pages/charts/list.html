@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Suggestions Dashboard</title>
+<style>
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: Chartreuse;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 50px 500px 50px 500px;
+ 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  margin: 50px 50px 50px 50px
+  cursor: pointer;
+  font-size: 25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 4px;
+    border-radius: 15px 50px 15px 0px;	
+    margin : 10px 150px 10px 150px;
+	text-align: center;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35.5px;
+  width: 35px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: Deepskyblue;
+
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 7px;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+</style>
+</head>
+
+<body style="background-image:url(hifi.jpg);background-size:100%;background-repeat:no-repeat;background-attachment:fixed"> 
+
+
+<h1 align="center" , style="font-size:45px; color: black">Suggestions</h1>
+
+
+
+<label class="container"><strong>Aww.. it's vacation time! Let's increase the staff.</strong>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+
+<label class="container"><strong>Umm... the park needs a break for maintenance as the season is less-crowded.</strong>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+
+<label class="container"><strong>Hey! Why don't you place dustbins in all the resting areas.</strong>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+
+<label class="container"><strong>Probably, some more fast food stalls can be put up in this season for the teenagers.</strong>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+
+<label class="container"><strong>Let's promote pollution-free vehicles - increase the number of cycles.</strong>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+
+<label class="container"><strong>Number of first aid kids should be increased.</strong<
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+
+<label class="container"><strong>Hey! Let's provide drinking water services in the resting area.</strong>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+
+<label class="container"><strong>Hmm...time to clean the park. Allot more days for cleaning.</strong>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+
+<label class="container"><strong>I think it's better to increase the number of battery cars.</strong>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+
+<label class="container"><strong>Hey! Set up benches for senior citizens in resting area.</strong>
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<a class="button" style="vertical-align:central" href="future.html"><span>Proceed </span></a>
+</body>
+</html>

@@ -1,0 +1,308 @@
+{
+  "Aggregated" : {
+    "DevicesInstalled" : {
+      "BatteryCars" : {
+        "2018" : 25,
+        "2019" : 29,
+        "2020" : 31,
+        "2021" : 35,
+        "2022" : 30
+      },
+      "Cycles" : {
+        "2018" : 45,
+        "2019" : 50,
+        "2020" : 55,
+        "2021" : 55,
+        "2022" : 60
+      }
+    },
+    "Employment" : {
+      "2018" : 2200,
+      "2019" : 2500,
+      "2020" : 2000,
+      "2021" : 2100,
+      "2022" : 2222
+    },
+    "GarbageCollected" : {
+      "2018" : 250,
+      "2019" : 200,
+      "2020" : 180,
+      "2021" : 230,
+      "2022" : 190
+    },
+    "Popularity" : {
+      "2018" : 20,
+      "2019" : 30,
+      "2020" : 50,
+      "2021" : 60,
+      "2022" : 55
+    },
+    "Revenue" : {
+      "2018" : 8.7,
+      "2019" : 8.5,
+      "2020" : 9,
+      "2021" : 9.1,
+      "2022" : 10
+    },
+    "SpeciesCount" : {
+      "y2018" : {
+        "Amphibians" : 10,
+        "Birds" : 45,
+        "Fishes" : 29,
+        "Insects" : 20,
+        "Mammals" : 45,
+        "Reptiles" : 35
+      },
+      "y2019" : {
+        "Amphibians" : 20,
+        "Birds" : 35,
+        "Fishes" : 20,
+        "Insects" : 35,
+        "Mammals" : 30,
+        "Reptiles" : 30
+      },
+      "y2020" : {
+        "Amphibians" : 15,
+        "Birds" : 31,
+        "Fishes" : 17,
+        "Insects" : 16,
+        "Mammals" : 52,
+        "Reptiles" : 30
+      },
+      "y2021" : {
+        "Amphibians" : 12,
+        "Birds" : 33,
+        "Fishes" : 29,
+        "Insects" : 15,
+        "Mammals" : 39,
+        "Reptiles" : 20
+      },
+      "y2022" : {
+        "Amphibians" : 5,
+        "Birds" : 35,
+        "Fishes" : 15,
+        "Insects" : 10,
+        "Mammals" : 40,
+        "Reptiles" : 30
+      }
+    },
+    "TouristFromForeign" : {
+      "2018" : 3,
+      "2019" : 2.93,
+      "2020" : 3.2,
+      "2021" : 3.33,
+      "2022" : 3.5
+    },
+    "TouristFromUT" : {
+      "2018" : 6,
+      "2019" : 5.86,
+      "2020" : 6.4,
+      "2021" : 6.66,
+      "2022" : 7
+    },
+    "TouristsFromStates" : {
+      "2018" : 12,
+      "2019" : 11.72,
+      "2020" : 12.8,
+      "2021" : 13.2,
+      "2022" : 14
+    },
+    "VisitorsCount" : {
+      "2018" : 18,
+      "2019" : 17.6,
+      "2020" : 19.2,
+      "2021" : 20,
+      "2022" : 21
+    }
+  },
+  "NonAggregated" : {
+    "DevicesInstalled" : {
+      "BatteryCars" : {
+        "2013" : 10,
+        "2014" : 13,
+        "2015" : 18,
+        "2016" : 20,
+        "2017" : 25
+      },
+      "Cycles" : {
+        "2013" : 30,
+        "2014" : 33,
+        "2015" : 35,
+        "2016" : 38,
+        "2017" : 40
+      }
+    },
+    "GarbageCollected" : {
+      "2013" : 200,
+      "2014" : 198,
+      "2015" : 230,
+      "2016" : 150,
+      "2017" : 220
+    },
+    "SpeciesCount" : {
+      "y2013" : {
+        "Amphibians" : 5,
+        "Birds" : 35,
+        "Fishes" : 25,
+        "Insects" : 10,
+        "Mammals" : 40,
+        "Reptiles" : 30
+      },
+      "y2014" : {
+        "Amphibians" : 10,
+        "Birds" : 30,
+        "Fishes" : 15,
+        "Insects" : 15,
+        "Mammals" : 39,
+        "Reptiles" : 20
+      },
+      "y2015" : {
+        "Amphibians" : 10,
+        "Birds" : 30,
+        "Fishes" : 15,
+        "Insects" : 13,
+        "Mammals" : 42,
+        "Reptiles" : 20
+      },
+      "y2016" : {
+        "Amphibians" : 12,
+        "Birds" : 33,
+        "Fishes" : 29,
+        "Insects" : 15,
+        "Mammals" : 39,
+        "Reptiles" : 20
+      },
+      "y2017" : {
+        "Amphibians" : 5,
+        "Birds" : 35,
+        "Fishes" : 15,
+        "Insects" : 10,
+        "Mammals" : 40,
+        "Reptiles" : 30
+      }
+    },
+    "VisitorsCount" : {
+      "2013" : 13.5,
+      "2014" : 14.6,
+      "2015" : 12.8,
+      "2016" : 17.2,
+      "2017" : 17.7
+    }
+  },
+    "Future" : {
+    "DevicesInstalled" : {
+      "BatteryCars" : {
+        "2018" : 25,
+        "2019" : 29,
+        "2020" : 31,
+        "2021" : 35,
+        "2022" : 30
+      },
+      "Cycles" : {
+        "2018" : 45,
+        "2019" : 50,
+        "2020" : 55,
+        "2021" : 55,
+        "2022" : 60
+      }
+    },
+    "Employment" : {
+      "2018" : 2200,
+      "2019" : 2500,
+      "2020" : 2000,
+      "2021" : 2100,
+      "2022" : 2222
+    },
+    "GarbageCollected" : {
+      "2018" : 250,
+      "2019" : 200,
+      "2020" : 180,
+      "2021" : 230,
+      "2022" : 190
+    },
+    "Popularity" : {
+      "2018" : 20,
+      "2019" : 30,
+      "2020" : 50,
+      "2021" : 60,
+      "2022" : 55
+    },
+    "Revenue" : {
+      "2018" : 8.7,
+      "2019" : 8.5,
+      "2020" : 9,
+      "2021" : 9.1,
+      "2022" : 10
+    },
+    "SpeciesCount" : {
+      "y2018" : {
+        "Amphibians" : 10,
+        "Birds" : 45,
+        "Fishes" : 29,
+        "Insects" : 20,
+        "Mammals" : 45,
+        "Reptiles" : 35
+      },
+      "y2019" : {
+        "Amphibians" : 20,
+        "Birds" : 35,
+        "Fishes" : 20,
+        "Insects" : 35,
+        "Mammals" : 30,
+        "Reptiles" : 30
+      },
+      "y2020" : {
+        "Amphibians" : 15,
+        "Birds" : 31,
+        "Fishes" : 17,
+        "Insects" : 16,
+        "Mammals" : 52,
+        "Reptiles" : 30
+      },
+      "y2021" : {
+        "Amphibians" : 12,
+        "Birds" : 33,
+        "Fishes" : 29,
+        "Insects" : 15,
+        "Mammals" : 39,
+        "Reptiles" : 20
+      },
+      "y2022" : {
+        "Amphibians" : 5,
+        "Birds" : 35,
+        "Fishes" : 15,
+        "Insects" : 10,
+        "Mammals" : 40,
+        "Reptiles" : 30
+      }
+    },
+    "TouristFromForeign" : {
+      "2018" : 3,
+      "2019" : 2.93,
+      "2020" : 3.2,
+      "2021" : 3.33,
+      "2022" : 3.5
+    },
+    "TouristFromUT" : {
+      "2018" : 6,
+      "2019" : 5.86,
+      "2020" : 6.4,
+      "2021" : 6.66,
+      "2022" : 7
+    },
+    "TouristsFromStates" : {
+      "2018" : 12,
+      "2019" : 11.72,
+      "2020" : 12.8,
+      "2021" : 13.2,
+      "2022" : 14
+    },
+    "VisitorsCount" : {
+      "2018" : 18,
+      "2019" : 17.6,
+      "2020" : 19.2,
+      "2021" : 20,
+      "2022" : 21
+    }
+  }
+}
